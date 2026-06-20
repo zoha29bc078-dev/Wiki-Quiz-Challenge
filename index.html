@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Wikipedia Quiz Challenge</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <p class="tagline">
+        Test your Wikipedia knowledge!
+    </p>
+
+    <p class="event-badge">
+        📚 25 Years of Free Knowledge
+    </p>
+
+    <footer>
+        Made with ❤️ for Wikipedia's 25th Birthday!
+    </footer>
+
+    <div class="container">
+
+        <!-- Home Screen -->
+        <div id="homeScreen">
+
+            <img src="images/wiki-logo.png" class="wiki-logo">
+
+            <img src="images/puzzle-piece.png" class="puzzle piece1">
+            <img src="images/puzzle-piece.png" class="puzzle piece2">
+            <img src="images/puzzle-piece.png" class="puzzle piece3">
+            <img src="images/puzzle-piece.png" class="puzzle piece4">
+
+            <h1>Wikipedia Quiz Challenge</h1>
+
+            <button id="startBtn">
+                Start Quiz 🚀
+            </button>
+
+        </div>
+
+        <!-- Quiz Screen -->
+        <div id="quizScreen" style="display:none;">
+
+            <h3 id="questionNumber"></h3>
+
+            <h3 id="scoreDisplay">
+                Score: 0
+            </h3>
+
+            <div id="progressContainer">
+                <div id="progressBar"></div>
+            </div>
+
+            <h2 id="question">
+                Question will appear here
+            </h2>
+
+            <div id="options"></div>
+
+            <p id="funFact"></p>
+
+            <br>
+
+            <button id="nextBtn">
+                Next
+            </button>
+
+        </div>
+
+        <!-- Result Screen -->
+        <div id="resultScreen" style="display:none;">
+
+            <h1>Quiz Finished!</h1>
+
+            <h2 id="finalScore"></h2>
+
+            <h3 id="resultMessage"></h3>
+
+            <button id="restartBtn">
+                Play Again 🔄
+            </button>
+
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

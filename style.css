@@ -1,0 +1,382 @@
+/* ---------- BODY ---------- */
+
+body{
+    font-family: Arial, sans-serif;
+    background: #f8f9fa;
+    margin: 0;
+    padding: 0;
+}
+
+/* Wikipedia Background Logo */
+
+body::before{
+    content: "";
+
+    position: fixed;
+
+    top: 50%;
+    left: 50%;
+
+    width: 650px;
+    height: 650px;
+
+    background: url("images/wiki-logo.png")
+    no-repeat center;
+
+    background-size: contain;
+
+    opacity: 0.03;
+
+    transform: translate(-50%, -50%);
+
+    z-index: -1;
+}
+
+/* ---------- TOP SECTION ---------- */
+
+.tagline{
+    text-align: center;
+
+    font-size: 24px;
+
+    color: #444;
+
+    margin-top: 25px;
+}
+
+.event-badge{
+    display: block;
+
+    width: fit-content;
+
+    margin: 20px auto;
+
+    padding: 12px 25px;
+
+    border: 2px solid #3366cc;
+
+    border-radius: 30px;
+
+    background: white;
+
+    font-weight: 600;
+}
+
+footer{
+    text-align: center;
+
+    color: #666;
+
+    font-size: 18px;
+
+    margin-bottom: 30px;
+}
+
+/* ---------- MAIN CONTAINER ---------- */
+
+.container{
+    max-width: 1000px;
+
+    margin: 30px auto;
+
+    padding: 40px;
+
+    background: rgba(255,255,255,0.95);
+
+    backdrop-filter: blur(10px);
+
+    border-radius: 30px;
+
+    box-shadow:
+    0 10px 30px rgba(0,0,0,0.08);
+
+    animation: fadeIn 0.6s ease;
+}
+
+/* ---------- HOME SCREEN ---------- */
+
+#homeScreen{
+    text-align: center;
+
+    min-height: 450px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+}
+
+.wiki-logo{
+    width: 150px;
+
+    display: block;
+
+    margin: 0 auto 20px auto;
+}
+
+#homeScreen h1{
+    font-size: 58px;
+
+    font-weight: 700;
+
+    line-height: 1.1;
+
+    color: #111827;
+
+    text-align: center;
+
+    margin: 15px auto 25px auto;
+}
+
+/* ---------- BUTTONS ---------- */
+
+button{
+    cursor: pointer;
+
+    border: none;
+
+    transition: 0.3s;
+}
+
+#startBtn,
+#restartBtn{
+    background: linear-gradient(
+        135deg,
+        #3366cc,
+        #4f7df3
+    );
+
+    color: white;
+
+    padding: 18px 45px;
+
+    font-size: 22px;
+
+    font-weight: bold;
+
+    border-radius: 16px;
+
+    box-shadow:
+    0 4px 12px rgba(51,102,204,0.3);
+}
+
+#startBtn:hover,
+#restartBtn:hover{
+    transform: translateY(-3px);
+
+    box-shadow:
+    0 8px 18px rgba(51,102,204,0.4);
+}
+
+/* ---------- QUIZ SCREEN ---------- */
+
+#questionNumber,
+#scoreDisplay{
+    text-align: center;
+}
+
+#progressContainer{
+    width: 85%;
+
+    height: 16px;
+
+    margin: 25px auto;
+
+    background: #e5e7eb;
+
+    border-radius: 20px;
+
+    overflow: hidden;
+}
+
+#progressBar{
+    height: 100%;
+
+    background: linear-gradient(
+        90deg,
+        #2563eb,
+        #4f7df3
+    );
+
+    border-radius: 20px;
+
+    transition: 0.5s;
+}
+
+#question{
+    text-align: center;
+
+    font-size: 42px;
+
+    font-weight: 700;
+
+    color: #111827;
+
+    margin: 35px 0;
+}
+
+.option-btn{
+    width: 100%;
+
+    padding: 20px;
+
+    margin: 12px 0;
+
+    background: white;
+
+    border: 2px solid #e5e7eb;
+
+    border-radius: 18px;
+
+    font-size: 20px;
+
+    transition: all 0.25s ease;
+}
+
+.option-btn:hover{
+    border-color: #2563eb;
+
+    transform: translateY(-2px);
+
+    box-shadow:
+    0 6px 15px rgba(37,99,235,0.12);
+}
+
+/* ---------- NEXT BUTTON ---------- */
+
+#nextBtn{
+    display: block;
+
+    margin: 30px auto;
+
+    background: linear-gradient(
+        135deg,
+        #2563eb,
+        #4f7df3
+    );
+
+    color: white;
+
+    padding: 16px 40px;
+
+    border-radius: 18px;
+
+    font-size: 20px;
+
+    font-weight: bold;
+
+    box-shadow:
+    0 8px 20px rgba(37,99,235,0.3);
+}
+
+#nextBtn:hover{
+    transform: translateY(-3px);
+
+    box-shadow:
+    0 12px 25px rgba(37,99,235,0.4);
+}
+
+/* ---------- FUN FACT ---------- */
+
+#funFact{
+    margin-top: 15px;
+
+    color: #444;
+
+    font-style: italic;
+
+    text-align: center;
+}
+
+/* ---------- RESULT SCREEN ---------- */
+
+#resultScreen{
+    text-align: center;
+}
+
+#resultScreen h1{
+    font-size: 45px;
+}
+
+#finalScore{
+    color: #3366cc;
+
+    font-size: 32px;
+}
+
+/* ---------- PUZZLE PIECES ---------- */
+
+.puzzle{
+    position: fixed;
+
+    width: 90px;
+
+    opacity: 0.05;
+
+    z-index: -1;
+
+    pointer-events: none;
+}
+
+.piece1{
+    top: 120px;
+    left: 120px;
+    transform: rotate(-15deg);
+}
+
+.piece2{
+    top: 120px;
+    right: 120px;
+    transform: rotate(15deg);
+}
+
+.piece3{
+    bottom: 120px;
+    left: 120px;
+    transform: rotate(-15deg);
+}
+
+.piece4{
+    bottom: 120px;
+    right: 120px;
+    transform: rotate(15deg);
+}
+
+/* ---------- ANIMATION ---------- */
+
+@keyframes fadeIn{
+    from{
+        opacity: 0;
+        transform: translateY(15px);
+    }
+
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ---------- MOBILE ---------- */
+
+@media(max-width:768px){
+
+    .container{
+        width: 90%;
+        padding: 20px;
+    }
+
+    #homeScreen h1{
+        font-size: 42px;
+    }
+
+    #question{
+        font-size: 28px;
+    }
+
+    .option-btn{
+        font-size: 18px;
+    }
+}
