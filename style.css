@@ -20,7 +20,7 @@ body::before{
     width: 650px;
     height: 650px;
 
-    background: url("images/wiki-logo.png")
+    background: url("wiki-logo.png")
     no-repeat center;
 
     background-size: contain;
@@ -380,3 +380,43 @@ button{
         font-size: 18px;
     }
 }
+
+/* ---------- PUZZLE PIECES ---------- */
+
+.puzzle{
+    position: fixed;
+
+    width: 110px;
+
+    opacity: 0.08;
+
+    z-index: 0;
+
+    pointer-events: none;
+}
+
+.piece1{
+    top: 120px;
+    left: 120px;
+    transform: rotate(-15deg);
+}
+
+.piece2{
+    top: 120px;
+    right: 120px;
+    transform: rotate(15deg);
+}
+
+.piece3{
+    bottom: 120px;
+    left: 120px;
+    transform: rotate(-15deg);
+}
+
+.piece4{
+    bottom: 120px;
+    right: 120px;
+    transform: rotate(15deg);
+}
+
+background: url("wiki-logo.png") no-repeat center;
