@@ -343,21 +343,26 @@ restartBtn.addEventListener("click", function(){
 
 });
 
-const clickSound = document.getElementById("clickSound");
-
-function playClickSound() {
-    clickSound.currentTime = 0;
-    clickSound.play();
-}
-
 startBtn.addEventListener("click", () => {
-    playClickSound();
+playClickSound();
 });
 
 nextBtn.addEventListener("click", () => {
-    playClickSound();
+playClickSound();
 });
 
 restartBtn.addEventListener("click", () => {
-    playClickSound();
+playClickSound();
+
+```
+score = 0;
+currentQuestion = 0;
+answered = false;
+
+progressBar.style.width = "0%";
+
+resultScreen.style.display = "none";
+homeScreen.style.display = "block";
+```
+
 });
