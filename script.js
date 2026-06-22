@@ -26,6 +26,15 @@ document.getElementById("resultMessage");
 const funFact =
 document.getElementById("funFact");
 
+const clickSound = document.getElementById("clickSound");
+const correctSound = document.getElementById("correctSound");
+const wrongSound = document.getElementById("wrongSound");
+const winSound = document.getElementById("winSound");
+
+function playClickSound() {
+    clickSound.currentTime = 0;
+    clickSound.play();
+}
 startBtn.addEventListener("click", function() {
 
     homeScreen.style.display = "none";
@@ -219,7 +228,12 @@ questions[currentQuestion].question;
     if(option === questions[currentQuestion].answer){
 
     button.style.backgroundColor = "green";
+
+    correctSound.currentTime = 0;
+    correctSound.play();
+
     score++;
+
     scoreDisplay.textContent =
 `Score: ${score}`;
 }
@@ -227,6 +241,8 @@ else{
 
     button.style.backgroundColor = "red";
 
+    wrongSound.currentTime = 0;
+    wrongSound.play();
 
     const buttons =
     document.querySelectorAll(".option-btn");
@@ -290,6 +306,15 @@ Math.round((score / questions.length) * 100);
     document.body.style.background =
     "#fff8dc";
 
+    winSound.currentTime = 0;
+    winSound.play();
+
+    resultMessage.textContent =
+    "🏆 Excellent! Perfect Score!";
+
+    document.body.style.background =
+    "#fff8dc";
+
 }
 else if(score >= questions.length / 2){
 
@@ -316,4 +341,23 @@ restartBtn.addEventListener("click", function(){
 
     homeScreen.style.display = "block";
 
+});
+
+const clickSound = document.getElementById("clickSound");
+
+function playClickSound() {
+    clickSound.currentTime = 0;
+    clickSound.play();
+}
+
+startBtn.addEventListener("click", () => {
+    playClickSound();
+});
+
+nextBtn.addEventListener("click", () => {
+    playClickSound();
+});
+
+restartBtn.addEventListener("click", () => {
+    playClickSound();
 });
