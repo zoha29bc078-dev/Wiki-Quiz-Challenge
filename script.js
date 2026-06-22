@@ -309,12 +309,6 @@ Math.round((score / questions.length) * 100);
     winSound.currentTime = 0;
     winSound.play();
 
-    resultMessage.textContent =
-    "🏆 Excellent! Perfect Score!";
-
-    document.body.style.background =
-    "#fff8dc";
-
 }
 else if(score >= questions.length / 2){
 
