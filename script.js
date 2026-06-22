@@ -348,7 +348,7 @@ playClickSound();
 restartBtn.addEventListener("click", () => {
 playClickSound();
 
-```
+
 score = 0;
 currentQuestion = 0;
 answered = false;
@@ -357,6 +357,7 @@ progressBar.style.width = "0%";
 
 resultScreen.style.display = "none";
 homeScreen.style.display = "block";
-```
+
 
 });
+
